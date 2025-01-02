@@ -170,8 +170,9 @@ function startTimer() {
 function winGame() {
     clearInterval(timer);
     winSound.play();
+    celebrateWin();
     setTimeout(() => {
-        alert('Congratulations! You won the game!');
+        alert('Congratulations! You won!\nTime: ' + time + ' seconds\nScore: ' + score);
     }, 500);
 }
 
@@ -222,4 +223,53 @@ function sendUserData() {
             submitButton.textContent = 'Submit Score';
         }
     });
+}
+
+function celebrateWin() {
+    // Initial burst of confetti
+    confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 }
+    });
+
+    // Create a confetti cannon on each side
+    function shootFromSide(startX) {
+        confetti({
+            particleCount: 50,
+            angle: startX === 0 ? 60 : 120,
+            spread: 50,
+            origin: { x: startX, y: 0.7 },
+            colors: ['#FFD700', '#FFA500', '#FF69B4', '#00FF00', '#4169E1']
+        });
+    }
+
+    // Shoot confetti from both sides
+    shootFromSide(0);
+    shootFromSide(1);
+
+    // Rain confetti for 3 seconds
+    let end = Date.now() + 3000;
+    let colors = ['#FFD700', '#FFA500', '#FF69B4', '#00FF00', '#4169E1'];
+
+    (function frame() {
+        confetti({
+            particleCount: 2,
+            angle: 60,
+            spread: 55,
+            origin: { x: 0 },
+            colors: colors
+        });
+        confetti({
+            particleCount: 2,
+            angle: 120,
+            spread: 55,
+            origin: { x: 1 },
+            colors: colors
+        });
+
+        if (Date.now() < end) {
+            requestAnimationFrame(frame);
+        }
+    }());
 }
