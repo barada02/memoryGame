@@ -1,0 +1,46 @@
+<html>
+
+<head>
+
+    <title>Memory Card Game</title>
+    <link rel="stylesheet" href="css.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+
+<body>
+    <div id="titleScreen">
+        <h1>Memory Card Game</h1>
+        <input type="text" id="username" placeholder="Enter your name" required><br> <br>
+        <button onclick="startGame()">Start Game</button>
+    </div>
+
+    <div id="gameScreen" style="display: none;">
+        <h1>Memory Card Game</h1>
+        <p id="userNameDisplay"></p>
+        <div id="selectedLevel" style="display: none;">
+            <p>Selected Level: <span id="currentLevel"></span></p>
+        </div>
+        <div id="gridSelection">
+            <button onclick="selectGrid('easy')">Easy (4x4)</button>
+            <button onclick="selectGrid('medium')">Medium (6x6)</button>
+            <button onclick="selectGrid('hard')">Hard (8x8)</button>
+        </div>
+        <div id="gameBoard" style="display: none;"></div>
+        <div id="scoreBoard">
+            <p>Time: <span id="time">0</span>s</p>
+            <p>Score: <span id="score">0</span></p>
+
+        </div>
+        <br>
+        <button onclick="resetGame()">Reset Game</button>
+        <button onclick="sendUserData()">Submit Score</button>
+    </div>
+
+    <audio id="gameSound" src="game-sound.mp3" loop></audio>
+    <audio id="winSound" src="win-sound.mp3"></audio>
+
+    <script src="actions.js"></script>
+</body>
+
+</html>
