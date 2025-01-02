@@ -1,6 +1,6 @@
 # Memory Card Game
 
-A fun and interactive memory card game built with HTML, CSS, and JavaScript. Test your memory by matching pairs of cards featuring colorful emojis while racing against time!
+A fun and interactive memory card game built with HTML, CSS, and JavaScript. Test your memory by matching pairs of cards featuring colorful emojis while racing against time! Complete with festive celebrations when you win!
 
 ## Features
 
@@ -12,10 +12,33 @@ A fun and interactive memory card game built with HTML, CSS, and JavaScript. Tes
 - Real-time score tracking
 - Timer to track your completion time
 - Interactive sound effects
+- Festive confetti celebration on winning
 - Responsive design for all devices
 - Score submission and storage system
 - User-friendly interface
 - Persistent leaderboard system
+
+## Game Features in Detail
+
+### Card System
+- Dynamic card generation based on difficulty
+- Smooth flip animations
+- Randomized emoji placement
+- Wide variety of colorful emojis
+- Consistent card flipping behavior
+
+### Scoring System
+- Points awarded based on successful matches
+- Time taken affects the final score
+- Higher difficulty levels offer more points
+- Scores saved to database for tracking
+
+### Victory Celebration
+- Colorful confetti explosion effect
+- Multi-directional confetti cannons
+- Celebratory sound effects
+- Persistent score tracking
+- Congratulatory message with final score
 
 ## Setup Instructions
 
@@ -54,21 +77,8 @@ A fun and interactive memory card game built with HTML, CSS, and JavaScript. Tes
 5. If the cards match, they stay face up
 6. If they don't match, they flip back after a short delay
 7. Complete the game by matching all pairs
-8. Your score is based on completion time and difficulty level
+8. Enjoy the celebration when you win!
 9. Submit your score to compete on the leaderboard
-
-## Game Features in Detail
-
-### Scoring System
-- Points are awarded based on successful matches
-- Time taken affects the final score
-- Higher difficulty levels offer more points
-
-### Card System
-- Dynamic card generation based on difficulty
-- Smooth flip animations
-- Randomized emoji placement
-- Wide variety of colorful emojis
 
 ## Technologies Used
 
@@ -77,6 +87,7 @@ A fun and interactive memory card game built with HTML, CSS, and JavaScript. Tes
   - CSS3 (with animations)
   - JavaScript (ES6+)
   - jQuery
+  - Canvas Confetti
 - Backend:
   - PHP 7+
   - MySQL
@@ -98,11 +109,14 @@ A fun and interactive memory card game built with HTML, CSS, and JavaScript. Tes
 
 ## Recent Updates
 
+- Added festive confetti celebration on game completion
 - Fixed card flip mechanics for consistent behavior
 - Improved emoji visibility on all clicks
 - Enhanced animation smoothness
 - Optimized card matching logic
 - Added more emoji varieties
+- Fixed database score submission
+- Improved error handling in PHP backend
 
 ## Contributing
 

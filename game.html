@@ -5,6 +5,7 @@
     <title>Memory Card Game</title>
     <link rel="stylesheet" href="css.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
 </head>
 
@@ -37,6 +38,7 @@
         <button onclick="sendUserData()">Submit Score</button>
     </div>
 
+    <canvas id="confettiCanvas"></canvas>
     <audio id="gameSound" src="game-sound.mp3" loop></audio>
     <audio id="winSound" src="win-sound.mp3"></audio>
 
